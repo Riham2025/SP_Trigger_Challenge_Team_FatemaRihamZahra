@@ -60,6 +60,21 @@ For MySQL (other databases like SQL Server, Oracle, PostgreSQL have similar conc
 
       DELIMITER ;
 
+7. Example:
+
+Stored Procedure to Get Employee Details by Department
+
+    DELIMITER //
+
+     CREATE PROCEDURE GetEmployeesByDepartment (
+    IN dept_id INT
+     )
+    BEGIN
+    SELECT id, name, position FROM employees
+    WHERE department_id = dept_id;
+     END //
+
+    DELIMITER ;
 
 
 

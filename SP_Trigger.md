@@ -190,7 +190,6 @@ inserted into a specified table or when specific table columns are updated.
    - **BEFORE Trigger**: Executes before the triggering event occurs.Executes before an INSERT, UPDATE, or DELETE operation.
    - **AFTER Trigger**: Executes after the triggering event occurs. Executes after an INSERT, UPDATE, or DELETE operation.
    - **INSTEAD OF Trigger**: Executes in place of the triggering event, allowing custom logic to be applied. Executes in place of an INSERT, UPDATE, or DELETE operation.
-✅ <ins>How It Works in a Database:</ins>>
    
 ### **Trigger Uses in real life appliaction**
    - A trigger could **prevent a user from deleting a record** if it is referenced by another table.
@@ -199,7 +198,89 @@ inserted into a specified table or when specific table columns are updated.
    - Triggers can be used to **log changes made to the database**, such as who made the change and when it occurred. This is useful for auditing purposes and tracking changes over time. For example, a trigger could log every time a student's grade is updated, including the old and new values, the user who made the change, and the timestamp, anthor example is with a financial institution might use a trigger to log every change to a customer's account balance, including the old value, the new value, timestamp, and user ID. 
    - In an e-commerce system, a trigger could be used to automatically update the total sales when a new sale is made.
 
- - ✅ <ins>**Refernces of Triggers in SQL**</ins>
+### Syntax of Trigger in SQL:
+```
+CREATE TRIGGER trigger_name
+ON table_name
+AFTER INSERT, UPDATE, DELETE
+AS
+BEGIN
+    -- SQL statements to execute
+END;
+
+```
+
+### Example of Trigger in SQL:
+```sql  
+CREATE TRIGGER trg_AfterInsert
+ON Employees
+AFTER INSERT
+AS
+BEGIN
+    DECLARE @empID INT;
+    SELECT @empID = inserted.EmployeeID FROM inserted;
+    
+    INSERT INTO AuditLog (EmployeeID, Action, ActionDate)
+    VALUES (@empID, 'Inserted', GETDATE());
+END;
+```
+### DDL Trigger Example:
+```sql  
+CREATE TRIGGER trg_PreventTableDrop
+ON DATABASE
+FOR DROP_TABLE
+AS
+BEGIN
+    RAISERROR('Dropping tables is not allowed.', 16, 1);
+    ROLLBACK;
+END;
+```
+### DML Trigger Example:
+```sql
+CREATE TRIGGER trg_UpdateSalary
+ON Employees
+AFTER UPDATE
+AS
+BEGIN
+    DECLARE @empID INT, @newSalary DECIMAL(10, 2);
+    SELECT @empID = inserted.EmployeeID, @newSalary = inserted.Salary FROM inserted;
+    
+    IF @newSalary < 0
+    BEGIN
+        RAISERROR('Salary cannot be negative.', 16, 1);
+        ROLLBACK;
+    END
+END;
+```
+### DML Trigger Example with INSTEAD OF:
+```sql
+CREATE TRIGGER trg_InsteadOfDelete
+ON Employees
+INSTEAD OF DELETE
+AS
+BEGIN
+    DECLARE @empID INT;
+    SELECT @empID = deleted.EmployeeID FROM deleted;
+    
+    -- Custom logic before deleting
+    INSERT INTO DeletedEmployees (EmployeeID, DeletedDate)
+    VALUES (@empID, GETDATE());
+    
+    -- Perform the actual delete
+    DELETE FROM Employees WHERE EmployeeID = @empID;
+END;
+```
+## logic of the above example:
+1. **Trigger Creation**: The trigger `trg_AfterInsert` is created on the `Employees` table to execute after an insert operation.
+1. **Variable Declaration**: It declares a variable `@empID` to hold the Employee ID of the newly inserted record.
+1. **Data Retrieval**: It retrieves the Employee ID from the `inserted` pseudo-table, which contains the new row(s) being inserted.
+1. **Audit Log Insertion**: It inserts a record into the `AuditLog` table, logging the Employee ID, action type ('Inserted'), and the current date and time.
+1. **Trigger Execution**: The trigger automatically executes whenever a new row is inserted into the `Employees` table, ensuring that an audit log entry is created for each insert operation.
+1. **DDL Trigger Example**: The `trg_PreventTableDrop` trigger prevents the dropping of tables in the database by raising an error and rolling back the operation.
+1. **DML Trigger Example**: The `trg_UpdateSalary` trigger checks if the new salary is negative after an update operation and raises an error if it is, rolling back the transaction.
+1. **INSTEAD OF Trigger Example**: The `trg_InsteadOfDelete` trigger allows custom logic to be executed before deleting a record, such as logging the deletion in a separate table before performing the actual delete operation.
+
+### ✅ <ins>**Refernces of Triggers in SQL**</ins>
 --------------------------
 
 1. [What is SQL Triggers?](https://www.geeksforgeeks.org/sql-trigger-student-database/)

@@ -18,8 +18,22 @@ This allows for complex operations to be encapsulated within the database itself
   - Code Reusability and Maintainability.
   - Enhanced Security.
   - Reduced Network Traffic.
-
 	
+4. How It Works in a Database:
+
+* Creation: You write the procedure once and store it in the database.
+
+* Storage: The database server compiles and saves it.
+
+* Execution: You call the procedure by name; optionally, pass in parameters.
+
+* Reusability: It can be reused multiple times across applications.
+
+* Security: Users can execute procedures without accessing underlying tables directly.
+
+* Optimization: Stored procedures are parsed and optimized when created, so they often run faster than ad hoc SQL.
+
+
 	
 	
 

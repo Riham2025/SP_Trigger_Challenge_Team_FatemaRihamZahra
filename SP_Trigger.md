@@ -6,6 +6,13 @@ They can accept input parameters, return output parameters, and include programm
 This allows for complex operations to be encapsulated within the database itself.
 ![](./image/storedProcedure.png)
 	
+2. Types of Stored Procedures
+ - System Stored Procedures: Provided by the database system for administrative tasks. 
+ - User-Defined Stored Procedures: Custom procedures created by users to perform specific tasks.
+ - Extended Stored Procedures: Allow external programs to be executed from within SQL Server.
+ - CLR Stored Procedures: Written in .NET languages and integrated into SQL Server for advanced functionality
+
+	
 	
 
 
@@ -17,3 +24,5 @@ This allows for complex operations to be encapsulated within the database itself
 
 **Refernces**
 1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm_source=chatgpt.com)
+2. [Types of Stored Procedures](https://www.geeksforgeeks.org/what-is-stored-procedures-in-sql/?utm_source=chatgpt.com)
+3. [Types of Stored Procedures](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm_source=chatgpt.com)

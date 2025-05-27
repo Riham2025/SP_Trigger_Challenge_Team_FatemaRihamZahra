@@ -118,21 +118,18 @@ inserted into a specified table or when specific table columns are updated.
 
  ✅  <ins>Trigger Properties:</ins>
 
-   It is a special type of stored procedure.
-
-It executes automatically without requiring manual invocation.
-
-It is always associated with a specific table in the database.
-
-It is triggered when a specific event occurs on that table, such as:
-
+- It is a special type of stored procedure.
+- It executes automatically without requiring manual invocation.
+- It is always associated with a specific table in the database.
+- It is triggered when a specific event occurs on that table, such as:
  1. INSERT (data entry)
-
  2. UPDATE (data modification)
-
  3. DELETE (data deletion)
 
  ![](./image/SQLServerTriggers.png)
+
+ <ins> Example of use trigger on specific table</ins>:
+  !['Example of use trigger on specific table'](./image/PLSQL-Trigger.jpg)
 
  
  ✅  <ins>Benefits of SQL Triggers</ins>

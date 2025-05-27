@@ -1,6 +1,6 @@
-# SP_Trigger_Challenge_Team_FatemaRihamZahra
+﻿# SP_Trigger_Challenge_Team_FatemaRihamZahra
 
-?? __**Explore & Research**__
+🧠 __**Explore & Research**__
 
 **1. <ins>What is a Stored Procedure? </ins>** 
  
@@ -9,14 +9,14 @@ They can accept input parameters, return output parameters, and include programm
 This allows for complex operations to be encapsulated within the database itself.
 ![](./image/storedProcedure.png)
 	
-? <ins>Types of Stored Procedures</ins>  
+✅ <ins>Types of Stored Procedures</ins>  
  - System Stored Procedures: Provided by the database system for administrative tasks. 
  - User-Defined Stored Procedures: Custom procedures created by users to perform specific tasks.
  - Extended Stored Procedures: Allow external programs to be executed from within SQL Server.
  - CLR Stored Procedures: Written in .NET languages and integrated into SQL Server for advanced functionality
 	
 	
- ?<ins>Benefits of Stored Procedures:</ins>  
+ ✅<ins>Benefits of Stored Procedures:</ins>  
  
 
 | Benefit               | Description                             |
@@ -29,7 +29,7 @@ This allows for complex operations to be encapsulated within the database itself
 
 
 	
-? <ins>How It Works in a Database:</ins>
+✅ <ins>How It Works in a Database:</ins>
 
 * Creation: You write the procedure once and store it in the database.
 
@@ -44,16 +44,16 @@ This allows for complex operations to be encapsulated within the database itself
 * Optimization: Stored procedures are parsed and optimized when created, so they often run faster than ad hoc SQL.
 
 
-? <ins>Structure of a Stored Procedure:</ins>
+✅ <ins>Structure of a Stored Procedure:</ins>
 
 
-   **1. Name** � Unique name to identify the procedure.
+   **1. Name** – Unique name to identify the procedure.
 
-   **2. Parameters** � Accepts input/output parameters (optional).
+   **2. Parameters** – Accepts input/output parameters (optional).
 
-   **3. Body**  � Contains SQL logic: SELECT, INSERT, UPDATE, DELETE, etc.
+   **3. Body**  – Contains SQL logic: SELECT, INSERT, UPDATE, DELETE, etc.
 
-? <ins> Syntax:</ins>
+✅ <ins> Syntax:</ins>
 
 For MySQL (other databases like SQL Server, Oracle, PostgreSQL have similar concepts with slightly different syntax):
 
@@ -70,7 +70,7 @@ For MySQL (other databases like SQL Server, Oracle, PostgreSQL have similar conc
 
       DELIMITER ;
 
-? <ins>Example:</ins>
+✅ <ins>Example:</ins>
 
 Stored Procedure to Get Employee Details by Department
 
@@ -92,7 +92,7 @@ Call it:
 
 
 
- ? <ins>**Refernces of Stored Procedure**</ins>
+ ✅ <ins>**Refernces of Stored Procedure**</ins>
 --------------------------
 
 1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm.com)
@@ -116,7 +116,7 @@ and keep accurate records of database activities. For example, a trigger can be 
 inserted into a specified table or when specific table columns are updated.
 
 
- ?  <ins>Trigger Properties:</ins>
+ ✅  <ins>Trigger Properties:</ins>
 
    It is a special type of stored procedure.
 
@@ -135,7 +135,7 @@ It is triggered when a specific event occurs on that table, such as:
  ![](./image/SQLServerTriggers.png)
 
  
- ?  <ins>Benefits of SQL Triggers</ins>
+ ✅  <ins>Benefits of SQL Triggers</ins>
 
  | **Benefit**                     | **Description**                                                                      |
 | ------------------------------- | ------------------------------------------------------------------------------------ |
@@ -149,6 +149,12 @@ It is triggered when a specific event occurs on that table, such as:
 | **Real-time Monitoring**     | Reacts immediately to data changes, useful for alerts or real-time dashboards.       |
 
 
+
+ ✅ <ins>**Refernces of Triggers in SQL**</ins>
+--------------------------
+
+1. [What is SQL Triggers?](https://www.geeksforgeeks.org/sql-trigger-student-database/)
+2. 
 
 
 

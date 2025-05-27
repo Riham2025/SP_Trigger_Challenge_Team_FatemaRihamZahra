@@ -134,6 +134,23 @@ It is triggered when a specific event occurs on that table, such as:
 
  ![](./image/SQLServerTriggers.png)
 
+ 
+ ?  <ins>Benefits of SQL Triggers</ins>
+
+ | **Benefit**                     | **Description**                                                                      |
+| ------------------------------- | ------------------------------------------------------------------------------------ |
+| **Automation of Tasks**      | Executes actions automatically in response to table events (INSERT, UPDATE, DELETE). |
+| **Data Integrity**           | Enforces data validation rules consistently at the database level.                   |
+| **Auditing and Logging**     | Keeps a history of data changes for traceability and compliance.                     |
+| **Centralized Logic**        | Business rules are stored in the database, reducing redundancy across apps.          |
+| **Improved Security**        | Monitors or restricts sensitive operations (e.g., who can update or delete data).    |
+| **Application Consistency**  | Ensures the same behavior across different applications accessing the database.      |
+| **Reduced Code Duplication** | Minimizes logic written in applications by handling tasks at the database level.     |
+| **Real-time Monitoring**     | Reacts immediately to data changes, useful for alerts or real-time dashboards.       |
+
+
+
+
 
 
 

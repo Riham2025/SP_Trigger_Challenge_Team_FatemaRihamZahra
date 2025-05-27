@@ -148,13 +148,25 @@ It is triggered when a specific event occurs on that table, such as:
 | **Reduced Code Duplication** | Minimizes logic written in applications by handling tasks at the database level.     |
 | **Real-time Monitoring**     | Reacts immediately to data changes, useful for alerts or real-time dashboards.       |
 
-
+**Types of Triggers in DBMS**
+1. **DDL Triggers**: 
+   - Those type of triggers are activated when changes are made to the structure of the database, such as creating, changing, or deleting tables or other objects.
+2. **DML Triggers**: 
+   - those type of triggers are triggers are activated by changes to the data in a table.Typically, these changes are made through INSERT, UPDATE, or DELETE statements.     
+3. **Logon Triggers**: 
+     - These triggers are activated when a user logs into the database. These triggers are mainly used to control who can access the database or to monitor who is logging in.
+<ins> Types based on their execution timing<ins>:
+   - **BEFORE Trigger**: Executes before the triggering event occurs.Executes before an INSERT, UPDATE, or DELETE operation.
+   - **AFTER Trigger**: Executes after the triggering event occurs. Executes after an INSERT, UPDATE, or DELETE operation.
+   - **INSTEAD OF Trigger**: Executes in place of the triggering event, allowing custom logic to be applied. Executes in place of an INSERT, UPDATE, or DELETE operation.
+✅ <ins>How It Works in a Database:</ins>>
+**Real-World Example:**
 
  ✅ <ins>**Refernces of Triggers in SQL**</ins>
 --------------------------
 
 1. [What is SQL Triggers?](https://www.geeksforgeeks.org/sql-trigger-student-database/)
-2. 
+2. [Types of Triggers in DBMS](https://www.ccbp.in/blog/articles/trigger-in-dbms)
 
 
 

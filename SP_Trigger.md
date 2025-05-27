@@ -13,11 +13,17 @@ This allows for complex operations to be encapsulated within the database itself
  - CLR Stored Procedures: Written in .NET languages and integrated into SQL Server for advanced functionality
 	
 	
- 3. Benefits of Stored Procedures
-  - Performance Optimization.
-  - Code Reusability and Maintainability.
-  - Enhanced Security.
-  - Reduced Network Traffic.
+ 3. Benefits of Stored Procedures:
+
+| Benefit               | Description                             |
+| --------------------- | --------------------------------------- |
+| **Reusability**     | Write once, use many times              |
+| **Maintainability** | Logic centralized in one place          |
+|  **Performance**     | Precompiled by the server               |
+|  **Security**        | Fine-grained access control             |
+|  **Modularity**      | Break down logic into manageable chunks |
+
+
 	
 4. How It Works in a Database:
 
@@ -79,17 +85,6 @@ Stored Procedure to Get Employee Details by Department
 Call it:
 
       CALL GetEmployeesByDepartment(3);
-
-8. Benefits of Stored Procedures:
-
-| Benefit               | Description                             |
-| --------------------- | --------------------------------------- |
-| **Reusability**     | Write once, use many times              |
-| **Maintainability** | Logic centralized in one place          |
-|  **Performance**     | Precompiled by the server               |
-|  **Security**        | Fine-grained access control             |
-|  **Modularity**      | Break down logic into manageable chunks |
-
 
 
 

@@ -8,7 +8,60 @@ A stored procedure is a set of SQL statements that perform a specific task, stor
 They can accept input parameters, return output parameters, and include programming constructs like loops and conditionals.
 This allows for complex operations to be encapsulated within the database itself.
 ![](./image/storedProcedure.png)
-	
+
+✅ <ins>Problems Solved by Stored Procedures:<ins>
+1. Code Reusability and Consistency
+Problem: Repeating the same SQL logic across multiple applications or scripts leads to code duplication and inconsistency.
+
+Solution:
+Stored procedures centralize SQL logic in one place, so it can be reused by many applications, ensuring consistent behavior.
+
+📌 Example: A stored procedure to calculate employee bonuses used by multiple payroll apps.
+
+2. Improved Performance
+Problem: Repeated SQL queries sent from applications increase parsing and execution time.
+
+Solution:
+Stored procedures are precompiled, so they execute faster than sending SQL from applications repeatedly.
+
+📌 Example: A procedure to batch update thousands of rows is more efficient than issuing individual SQL updates.
+
+3. Encapsulation of Complex Logic
+Problem: Writing and maintaining complex SQL logic across many applications is difficult and error-prone.
+
+Solution:
+Stored procedures allow complex business logic (loops, conditions, error handling) to be written and managed in one place.
+
+📌 Example: Order fulfillment logic with inventory checks and payment processing.
+
+4. Improved Security and Access Control
+Problem: Giving direct access to tables risks unauthorized operations or data leaks.
+
+Solution:
+You can grant users permission to execute stored procedures without giving access to the underlying tables.
+
+📌 Example: A user can call get_salary_info() without having direct access to the salary table.
+
+5. Minimizing Network Traffic
+Problem: Sending multiple SQL commands over a network increases latency and bandwidth usage.
+
+Solution:
+Stored procedures execute on the server, reducing the amount of data transferred between client and server.
+
+📌 Example: A procedure that fetches and processes data before sending only final results to the client.
+
+6. Ease of Maintenance and Updates
+Problem: Changing logic in application code is time-consuming and error-prone.
+
+Solution:
+Updating a stored procedure in the database automatically applies to all clients using it.
+
+7. Error Handling and Debugging
+Problem: Handling database errors in application code can be complex and inconsistent.
+
+Solution:
+Stored procedures provide built-in exception handling to catch and respond to runtime issues.
+
 ✅ <ins>Types of Stored Procedures</ins>  
  - System Stored Procedures: Provided by the database system for administrative tasks. 
  - User-Defined Stored Procedures: Custom procedures created by users to perform specific tasks.
@@ -92,7 +145,7 @@ Call it:
 
 
 
- ✅ <ins>**Refernces of Stored Procedure**</ins>
+##### ✅ <ins>**Refernces of Stored Procedure**</ins>
 --------------------------
 
 1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm.com)

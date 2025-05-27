@@ -11,7 +11,15 @@ This allows for complex operations to be encapsulated within the database itself
  - User-Defined Stored Procedures: Custom procedures created by users to perform specific tasks.
  - Extended Stored Procedures: Allow external programs to be executed from within SQL Server.
  - CLR Stored Procedures: Written in .NET languages and integrated into SQL Server for advanced functionality
+	
+	
+ 3. Benefits of Stored Procedures
+  - Performance Optimization.
+  - Code Reusability and Maintainability.
+  - Enhanced Security.
+  - Reduced Network Traffic.
 
+	
 	
 	
 
@@ -23,6 +31,7 @@ This allows for complex operations to be encapsulated within the database itself
 
 
 **Refernces**
-1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm_source=chatgpt.com)
-2. [Types of Stored Procedures](https://www.geeksforgeeks.org/what-is-stored-procedures-in-sql/?utm_source=chatgpt.com)
-3. [Types of Stored Procedures](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm_source=chatgpt.com)
+1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm.com)
+2. [Types of Stored Procedures](https://www.geeksforgeeks.org/what-is-stored-procedures-in-sql/?utm.com)
+3. [Types of Stored Procedures](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm.com)
+4. [Benefits of Stored Procedures](https://www.splunk.com/en_us/blog/learn/stored-procedures.html?utm.com)

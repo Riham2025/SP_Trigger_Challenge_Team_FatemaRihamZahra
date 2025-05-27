@@ -1,5 +1,6 @@
 # SP_Trigger_Challenge_Team_FatemaRihamZahra
  Explore & Research 
+
 1.  What is a Stored Procedure?
 A stored procedure is a set of SQL statements that perform a specific task, stored in the database for reuse.
 They can accept input parameters, return output parameters, and include programming constructs like loops and conditionals.
@@ -43,11 +44,11 @@ This allows for complex operations to be encapsulated within the database itself
 5. Structure of a Stored Procedure:
 
 
-  **1.Name** – Unique name to identify the procedure.
+   **1. Name** – Unique name to identify the procedure.
 
-  **2.Parameters** – Accepts input/output parameters (optional).
+   **2. Parameters** – Accepts input/output parameters (optional).
 
-  **3.Body**  – Contains SQL logic: SELECT, INSERT, UPDATE, DELETE, etc.
+   **3. Body**  – Contains SQL logic: SELECT, INSERT, UPDATE, DELETE, etc.
 
 6. Syntax:
 
@@ -88,18 +89,7 @@ Call it:
 
 
 
-
-	
-	
-
-
-
-
-
-
-
-
-**Refernces**
+**Refernces of Stored Procedure**
 --------------------------
 
 1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm.com)
@@ -110,3 +100,27 @@ Call it:
 6. [ Structure of a Stored Procedure](https://learn.microsoft.com/en-us/sql/t-sql/statements/create-procedure-transact-sql?view=sql-server-ver17)
 7. [ Syntax  ](https://docs.oracle.com/en/database/oracle/oracle-database/19/lnpls/plsql-subprograms.html)
 8. [ CREATE PROCEDURE ](https://www.postgresql.org/docs/current/sql-createprocedure.html)
+
+
+----------------------------------------------------------
+
+
+2. What is SQL Triggers?
+
+A trigger is a stored procedure in a database that automatically invokes whenever a special
+event in the database occurs. By using SQL triggers, developers can automate tasks, ensure data consistency,
+and keep accurate records of database activities. For example, a trigger can be invoked when a row is
+inserted into a specified table or when specific table columns are updated.
+
+
+
+
+
+	
+	
+
+
+
+
+
+

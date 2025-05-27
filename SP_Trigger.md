@@ -7,4 +7,13 @@ This allows for complex operations to be encapsulated within the database itself
 ![](./image/storedProcedure.png)
 	
 	
-	
+
+
+
+
+
+
+
+
+**Refernces**
+1. [What is a Stored Procedure?](https://learn.microsoft.com/en-us/sql/relational-databases/stored-procedures/stored-procedures-database-engine?view=sql-server-ver17&utm_source=chatgpt.com)

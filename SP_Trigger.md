@@ -43,6 +43,26 @@ This allows for complex operations to be encapsulated within the database itself
 
   **3.Body**  – Contains SQL logic: SELECT, INSERT, UPDATE, DELETE, etc.
 
+6. Syntax:
+
+For MySQL (other databases like SQL Server, Oracle, PostgreSQL have similar concepts with slightly different syntax):
+
+      
+       DELIMITER //
+
+     CREATE PROCEDURE procedure_name (
+    IN param1 datatype,
+    OUT param2 datatype
+     )
+    BEGIN
+    -- SQL statements
+     END //
+
+      DELIMITER ;
+
+
+
+
 
 	
 	

@@ -34,6 +34,16 @@ This allows for complex operations to be encapsulated within the database itself
 * Optimization: Stored procedures are parsed and optimized when created, so they often run faster than ad hoc SQL.
 
 
+5. Structure of a Stored Procedure:
+
+
+  **1.Name** – Unique name to identify the procedure.
+
+  **2.Parameters** – Accepts input/output parameters (optional).
+
+  **3.Body**  – Contains SQL logic: SELECT, INSERT, UPDATE, DELETE, etc.
+
+
 	
 	
 

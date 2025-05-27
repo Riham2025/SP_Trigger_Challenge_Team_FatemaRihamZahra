@@ -160,13 +160,20 @@ It is triggered when a specific event occurs on that table, such as:
    - **AFTER Trigger**: Executes after the triggering event occurs. Executes after an INSERT, UPDATE, or DELETE operation.
    - **INSTEAD OF Trigger**: Executes in place of the triggering event, allowing custom logic to be applied. Executes in place of an INSERT, UPDATE, or DELETE operation.
 ✅ <ins>How It Works in a Database:</ins>>
-**Real-World Example:**
+   
+**Trigger Uses in real life appliaction**
+   - A trigger could **prevent a user from deleting a record** if it is referenced by another table.
+   - A trigger could **ensure that a student's grade** is always within the valid range (0 to 100) before it's inserted into the database. 
+   - Triggers can help maintain data integrity by **automatically updating related tables or fields when changes occur**. For example, if a student's grade is updated, a trigger could automatically update the student's overall GPA in another table. 
+   - Triggers can be used to **log changes made to the database**, such as who made the change and when it occurred. This is useful for auditing purposes and tracking changes over time. For example, a trigger could log every time a student's grade is updated, including the old and new values, the user who made the change, and the timestamp, anthor example is with a financial institution might use a trigger to log every change to a customer's account balance, including the old value, the new value, timestamp, and user ID. 
+   - In an e-commerce system, a trigger could be used to automatically update the total sales when a new sale is made.
 
- ✅ <ins>**Refernces of Triggers in SQL**</ins>
+ - ✅ <ins>**Refernces of Triggers in SQL**</ins>
 --------------------------
 
 1. [What is SQL Triggers?](https://www.geeksforgeeks.org/sql-trigger-student-database/)
 2. [Types of Triggers in DBMS](https://www.ccbp.in/blog/articles/trigger-in-dbms)
+3. [Trigger Uses](https://estuary.dev/blog/database-triggers/)
 
 
 

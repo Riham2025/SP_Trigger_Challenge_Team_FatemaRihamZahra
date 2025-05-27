@@ -76,6 +76,20 @@ Stored Procedure to Get Employee Details by Department
 
     DELIMITER ;
 
+Call it:
+
+      CALL GetEmployeesByDepartment(3);
+
+8. Benefits of Stored Procedures:
+
+| Benefit               | Description                             |
+| --------------------- | --------------------------------------- |
+| **Reusability**     | Write once, use many times              |
+| **Maintainability** | Logic centralized in one place          |
+|  **Performance**     | Precompiled by the server               |
+|  **Security**        | Fine-grained access control             |
+|  **Modularity**      | Break down logic into manageable chunks |
+
 
 
 

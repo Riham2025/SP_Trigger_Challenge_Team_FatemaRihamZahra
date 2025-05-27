@@ -108,15 +108,49 @@ Call it:
 ----------------------------------------------------------
 
 
-**2. <ins>What is SQL Triggers?</ins>** 
+## **<ins>Trigger in the database</ins>** 
+
+### <ins>What is a Trigger?</ins>
 
 A trigger is a stored procedure in a database that automatically invokes whenever a special
 event in the database occurs. By using SQL triggers, developers can automate tasks, ensure data consistency,
 and keep accurate records of database activities. For example, a trigger can be invoked when a row is
 inserted into a specified table or when specific table columns are updated.
 
+### **<ins> What Kind of Problem Does a Trigger Solve in a Database?<ins>
+##### Triggers solve several problems in a database, including:
+**1. Ensuring Data Integrity**
+- Triggers can enforce complex constraints beyond what is possible with simple CHECK or FOREIGN KEY constraints.
 
- ✅  <ins>Trigger Properties:</ins>
+- Example: Prevent inserting an order if the customer’s credit limit would be exceeded.
+
+**2. Automating System Tasks**
+- Triggers automate routine system-level tasks that must happen in response to data changes.
+
+- Example: Automatically update a last_modified timestamp whenever a row is updated.
+
+**3. Auditing and Logging**
+- Triggers can be used to track changes for auditing purposes.
+
+- Example: Log every DELETE operation on a sensitive table into an audit table for security review.
+
+**4. Enforcing Business Rules**
+- Triggers enforce complex business logic at the database level.
+
+- Example: Reject an INSERT into the employees table if the department budget is exceeded.
+
+**5. Maintaining Derived or Summary Data**
+- Triggers help maintain aggregated or derived data automatically.
+
+- Example: Automatically update total sales in a summary table when a new sale is inserted.
+
+**6. Preventing Invalid Transactions**
+- You can use triggers to roll back transactions if specific conditions aren't met.
+
+- Example: Prevent insertion of records on weekends.
+
+
+ ### ✅  <ins>Trigger Properties:</ins>
 
 - It is a special type of stored procedure.
 - It executes automatically without requiring manual invocation.
@@ -128,11 +162,11 @@ inserted into a specified table or when specific table columns are updated.
 
  ![](./image/SQLServerTriggers.png)
 
- <ins> Example of use trigger on specific table</ins>:
+ ### <ins> Example of use trigger on specific table</ins>:
   !['Example of use trigger on specific table'](./image/PLSQL-Trigger.jpg)
 
  
- ✅  <ins>Benefits of SQL Triggers</ins>
+ ### ✅  <ins>Benefits of SQL Triggers</ins>
 
  | **Benefit**                     | **Description**                                                                      |
 | ------------------------------- | ------------------------------------------------------------------------------------ |
@@ -145,7 +179,7 @@ inserted into a specified table or when specific table columns are updated.
 | **Reduced Code Duplication** | Minimizes logic written in applications by handling tasks at the database level.     |
 | **Real-time Monitoring**     | Reacts immediately to data changes, useful for alerts or real-time dashboards.       |
 
-**Types of Triggers in DBMS**
+### **Types of Triggers in DBMS**
 1. **DDL Triggers**: 
    - Those type of triggers are activated when changes are made to the structure of the database, such as creating, changing, or deleting tables or other objects.
 2. **DML Triggers**: 
@@ -158,7 +192,7 @@ inserted into a specified table or when specific table columns are updated.
    - **INSTEAD OF Trigger**: Executes in place of the triggering event, allowing custom logic to be applied. Executes in place of an INSERT, UPDATE, or DELETE operation.
 ✅ <ins>How It Works in a Database:</ins>>
    
-**Trigger Uses in real life appliaction**
+### **Trigger Uses in real life appliaction**
    - A trigger could **prevent a user from deleting a record** if it is referenced by another table.
    - A trigger could **ensure that a student's grade** is always within the valid range (0 to 100) before it's inserted into the database. 
    - Triggers can help maintain data integrity by **automatically updating related tables or fields when changes occur**. For example, if a student's grade is updated, a trigger could automatically update the student's overall GPA in another table. 

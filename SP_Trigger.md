@@ -342,6 +342,24 @@ END;
 
 
 
+✅ <ins>**Difference between stored procedures, trigger and function**</ins>
+
+| Feature                | Stored Procedure                                      | Trigger                                               | Function                                              |
+|------------------------|-------------------------------------------------------|-------------------------------------------------------|-------------------------------------------------------|
+| Purpose                | Execute a set of SQL statements for specific tasks    | Automatically execute in response to table events     | Return a value or perform calculations                 |
+| Execution              | Called explicitly by applications or scripts          | Automatically invoked by database events              | Called explicitly in SQL expressions or statements     |
+| Invocation             | Called explicitly by name                             | Automatically invoked by database events              | Called explicitly in SQL expressions or statements     |
+| Parameters             | Can accept input/output parameters                    | Cannot accept parameters                               | Can accept input parameters                            |
+| Return Value           | Can return multiple result sets or output parameters  | Does not return a value                                | Must return a single value                            |
+| Transaction Control    | Can include transaction control (COMMIT/ROLLBACK)    | Cannot control transactions directly                   | Cannot control transactions directly                   |
+| Side Effects           | Can modify data, create tables, etc.                 | Automatically modifies data based on events            | Cannot modify database state; used for calculations    |
+| Execution Context      | Executed in the context of the calling application    | Executed in the context of the database event         | Executed in the context of the calling SQL statement   |
+| Use Cases              | Batch processing, complex logic, data manipulation   | Enforcing business rules, auditing, logging           | Data validation, calculations, transformations         |
+| Performance            | Can be optimized for performance                      | May impact performance if not designed carefully       | Generally lightweight, used for calculations           |
+| Security               | Can be secured with permissions                        | Can restrict access to sensitive operations            | Can be secured with permissions                        |
+| Maintenance            | Requires explicit updates for changes                 | Automatically applies to all relevant events           | Requires updates for changes in logic                  |
+
+
 
 
 

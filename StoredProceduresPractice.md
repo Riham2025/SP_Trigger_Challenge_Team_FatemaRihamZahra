@@ -171,6 +171,30 @@
 
 ✅ Can a procedure call another procedure?
 
+--Can a procedure call another procedure? 
+-- Define the inner procedure
+
+        CREATE PROCEDURE InnerProcedure
+     AS
+        BEGIN
+    PRINT 'Inner procedure executed.';
+        END;
+       GO
+
+      -- Define the outer procedure that calls the inner one
+        CREATE PROCEDURE OuterProcedure
+           AS
+           BEGIN
+    PRINT 'Outer procedure started.';
+    EXEC InnerProcedure;  -- Calling the inner procedure
+    PRINT 'Outer procedure ended.';
+       END;
+       GO
+
+         -- Execute the outer procedure
+           EXEC OuterProcedure;
+
+
 ![](./image/sp8SpCallingAnotherSp.png)
 
 

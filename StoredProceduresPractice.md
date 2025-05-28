@@ -29,6 +29,37 @@
 ✅ Input/output parameters 
 
 
+    -- Alter the existing stored procedure 'UpdateBookStatus'
+           ALTER PROCEDURE UpdateBookStatus
+    @BookID INT,               -- Input parameter: ID of the book to update
+    @NewStatus VARCHAR(20)     -- Input parameter: New status to assign to the book
+     AS
+            BEGIN
+    -- Check if the new status is 'Overdue'; if so, prevent the update
+    IF @NewStatus = 'Overdue'
+    BEGIN
+        -- Raise an error message and exit the procedure
+        RAISERROR('Cannot manually set status to Overdue.', 16, 1);
+        RETURN;
+    END
+
+    -- Update the book's status in the Book table
+    UPDATE Book
+    SET Statu = @NewStatus
+    WHERE BID = @BookID;
+     END;
+
+
+        select * from Book
+        -- Example Usage:
+        EXEC UpdateBookStatus @BookID = 1, @NewStatus = 'Overdue'; --EXEC UpdateBookStatus 1, 'Overdue'
+       select * from Book
+
+
+
+
+
+
 ![](./image/sp3.png)
 
 ![](./image/sp4.png)

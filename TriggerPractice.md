@@ -74,6 +74,12 @@ SELECT * FROM libraries WHERE name = 'NPL';
 ```
 ![](./image/InsteadDeleteTrigger.JPG)
 
+### What happens when you DROP a table with triggers? 
+ 
+ When you drop a table that has triggers associated with it, the triggers are automatically dropped as well. This means that any logic defined in those triggers will no longer be executed, and the trigger definitions will be removed from the database.
 
-
+ ``` -- Example: Dropping the books table
+ DROP TABLE books;
+ -- This will also drop any triggers associated with the books table
+ ```
 

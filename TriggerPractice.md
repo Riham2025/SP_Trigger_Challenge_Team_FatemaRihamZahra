@@ -27,7 +27,7 @@ SELECT * FROM Book_Audit;
 ```
 ![](./image/AfterInsertTrigger.JPG)
 
-### BEFORE UPDATE Trigger: Prevent Price from Decreasing
+### BEFORE UPDATE Trigger: book avilable
 ```
 CREATE TRIGGER trg_UpdateBookStatusAfterLoan
 ON loan
@@ -49,7 +49,7 @@ select * from books
 select * from loan
 select * from member
 ```
-![](./image/AfterinseartTrigger.JPG)
+![](./image/Update stock levels automatically.JPG)
 
 ### 3.INSTEAD OF DELETE Trigger: Prevent Direct Deletion of Libraries
 

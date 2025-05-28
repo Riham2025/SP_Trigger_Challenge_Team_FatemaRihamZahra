@@ -27,4 +27,31 @@ SELECT * FROM Book_Audit;
 ```
 ![](./image/AfterInsertTrigger.JPG)
 
+### BEFORE UPDATE Trigger: Prevent Price from Decreasing
+```
+CREATE TRIGGER trg_UpdateBookStatusAfterLoan
+ON loan
+AFTER INSERT
+AS
+BEGIN
+   -- Update the book's availability status to 0 (borrowed)
+    UPDATE books
+    SET avail_status = 0
+    FROM books
+    INNER JOIN inserted i ON books.book_id = i.book_id
+END;
+INSERT INTO loan (loan_id, book_id, member_id, loan_date, due_date, return_date, status)
+VALUES (11, 6, 4, '2025-05-28', '2025-06-11', '2025-06-10', 'issued');
+select * from books
+INSERT INTO loan (loan_id, book_id, member_id, loan_date, due_date, return_date, status)
+VALUES (12, 1, 4, '2025-05-28', '2025-06-11', '2025-06-10', 'issued');
+select * from books
+select * from loan
+select * from member
+```
+![](./image/AfterinseartTrigger.JPG)
+
+
+
+
 

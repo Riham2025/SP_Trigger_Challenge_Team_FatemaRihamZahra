@@ -3,6 +3,7 @@
 📌 <ins>Use a real-life case for Library System:</ins>
 
    ✅ Create meaningful stored procedures:
+
    ![](./image/sp1.png)
 
  # 🧠 Explore and Practice for  Stored Procedure:

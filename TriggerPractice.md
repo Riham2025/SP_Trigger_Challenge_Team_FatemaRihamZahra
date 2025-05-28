@@ -51,6 +51,28 @@ select * from member
 ```
 ![](./image/AfterinseartTrigger.JPG)
 
+### 3.INSTEAD OF DELETE Trigger: Prevent Direct Deletion of Libraries
+
+```
+INSTEAD OF DELETE trigger on libraries table
+CREATE TRIGGER trg_InsteadOfDeleteLibrary
+ON libraries
+INSTEAD OF DELETE
+AS
+BEGIN
+    RAISERROR ('Deletion of library records is not allowed. Please contact database administrator.', 16, 1);
+END;
+GO
+
+-- Test the trigger: This should fail
+DELETE FROM libraries
+WHERE name = 'NPL';
+
+
+-- Verify that the library still exists
+SELECT * FROM libraries WHERE name = 'NPL';
+```
+![](./image/InsteadDeleteTrigger.JPG)
 
 
 

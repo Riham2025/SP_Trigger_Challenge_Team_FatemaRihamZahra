@@ -49,7 +49,7 @@ select * from books
 select * from loan
 select * from member
 ```
-![](./image/Update stock levels automatically.JPG)
+![](./image/AfterApdateautomatically.JPG)
 
 ### 3.INSTEAD OF DELETE Trigger: Prevent Direct Deletion of Libraries
 

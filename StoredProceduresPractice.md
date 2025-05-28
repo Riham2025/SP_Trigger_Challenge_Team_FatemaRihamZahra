@@ -29,7 +29,8 @@
 ✅ Input/output parameters 
 
 
-    -- Alter the existing stored procedure 'UpdateBookStatus'
+ -- Alter the existing stored procedure 'UpdateBookStatus'
+
            ALTER PROCEDURE UpdateBookStatus
     @BookID INT,               -- Input parameter: ID of the book to update
     @NewStatus VARCHAR(20)     -- Input parameter: New status to assign to the book
@@ -55,9 +56,17 @@
         EXEC UpdateBookStatus @BookID = 1, @NewStatus = 'Overdue'; --EXEC UpdateBookStatus 1, 'Overdue'
        select * from Book
 
+       ---------------------------------------------------------
 
 
 
+  -- -- Drop the stored procedure 'UpdateBookStatus'
+
+              DROP PROCEDURE IF EXISTS UpdateBookStatus;
+    select * from Book
+    -- Example Usage:
+       EXEC UpdateBookStatus @BookID = 1, @NewStatus = 'Issued'; --EXEC UpdateBookStatus 1, 'Issued'
+    select * from Book
 
 
 ![](./image/sp3.png)

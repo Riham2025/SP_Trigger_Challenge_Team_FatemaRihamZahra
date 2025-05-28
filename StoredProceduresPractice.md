@@ -102,6 +102,42 @@
     END
     ELSE
     BEGIN
+             -- If the book is not returned, proceed to update the status
+        UPDATE Book
+        SET Statu = @NewStatus
+        WHERE BID = @BookID;
+
+        -- Print a confirmation message
+        PRINT 'Book status updated successfully.';
+    END
+      END;
+
+      
+            -- Example: Update the status of the book with ID 1 to 'Returned'
+        select * from book 
+          EXEC UpdateBookStatusWithCheck @BookID = 3, @NewStatus = 'Issued';
+           select * from book 
+
+
+
+           
+-- stored procedure with loop 
+-- Stored Procedure: PrintNumbers
+-- This procedure prints numbers from 1 to 5 using a WHILE loop.
+
+               CREATE PROCEDURE PrintNumbers
+            AS
+          BEGIN
+       DECLARE @Counter INT = 1; -- Initialize counter variable
+
+    WHILE @Counter <= 5
+    BEGIN
+        PRINT @Counter; -- Output the current value of the counter
+        SET @Counter = @Counter + 1; -- Increment the counter
+    END
+      END;
+
+exec PrintNumbers 
 
 ![](./image/sp5if_no.png)
 

@@ -201,5 +201,18 @@
 ✅ Try logic Error in stored procedures:
 
 
+-- Attempting to create a stored procedure with intentional syntax errors
+
+            CREATE PROCEDURE sp_UpdateBookStatus
+    @BookID INT
+    @NewStatus VARCHAR(20) 
+        AS
+           BEGIN
+    UPDATE Books
+    SET Statu = @NewStatus
+    WHERE BID = @BookID
+
+         END
+
 ![](./image/sp9IncorrectDataTypeError.png)
 

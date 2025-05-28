@@ -83,3 +83,25 @@ SELECT * FROM libraries WHERE name = 'NPL';
  -- This will also drop any triggers associated with the books table
  ```
 
+ ### What if data doesn’t meet the condition inside trigger? 
+ When data does not meet the conditions specified in a trigger, the trigger's logic will not execute, and the operation (INSERT, UPDATE, DELETE) will proceed as normal. However, if the trigger contains logic that raises an error or prevents the operation based on certain conditions, then the operation will be halted, and an error message will be returned.
+ ```sql
+ -- Example: Trigger that prevents insertion of books with a price less than 0
+ CREATE TRIGGER trg_PreventNegativePrice
+ ON books
+ AFTER INSERT
+ AS
+ BEGIN
+    IF EXISTS (SELECT * FROM inserted WHERE price < 0)
+    BEGIN
+        RAISERROR('Price cannot be negative.', 16, 1);
+        ROLLBACK TRANSACTION; -- Rollback the transaction if condition is met
+    END
+    END;
+    -- Test the trigger
+    INSERT INTO books (ISBM, title, genre, price, avail_status, shelf_location, library_id)
+    VALUES (9781012, 'Negative Price Book', 'Fiction', -5.00, 1, 'B5', 1);
+    -- This will raise an error and rollback the transaction
+ ```
+
+ ![](./image/TriggerIfDataDoNotExist.JPG)

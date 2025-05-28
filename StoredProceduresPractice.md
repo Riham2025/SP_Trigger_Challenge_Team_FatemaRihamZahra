@@ -75,6 +75,34 @@
 
 ✅ Using conditions, variables, loops 
 
+
+-- stored procedured with conditions 
+-- Create a stored procedure to update book status with conditional logic
+
+              CREATE PROCEDURE UpdateBookStatusWithCheck
+
+    @BookID INT,               -- Input parameter: ID of the book to update
+    @NewStatus VARCHAR(20)     -- Input parameter: New status to set for the book
+           AS
+            BEGIN
+    -- Declare a variable to hold the current status of the book
+
+    DECLARE @CurrentStatus VARCHAR(20);
+
+    -- Retrieve the current status of the book from the Book table
+    SELECT @CurrentStatus = Statu
+    FROM Book
+    WHERE BID = @BookID;
+
+    -- Check if the current status is 'Returned'
+    IF @CurrentStatus = 'Returned'
+    BEGIN
+        -- If the book is already returned, print a message and do not update
+        PRINT 'The book is already returned. No update performed.';
+    END
+    ELSE
+    BEGIN
+
 ![](./image/sp5if_no.png)
 
 ![](./image/sp5if_yes.png)

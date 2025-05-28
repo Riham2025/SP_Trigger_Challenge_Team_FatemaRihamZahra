@@ -4,6 +4,22 @@
 
    ✅ Create meaningful stored procedures:
 
+     --Stored Action: Update Book Status
+    CREATE PROCEDURE UpdateBookStatus -- Stored Procedure: UpdateBookStatus
+    @BookID INT,
+     @NewStatus VARCHAR(20)
+    AS
+    BEGIN
+    UPDATE Book -- Purpose: Updates the status of a specific book in the Book table based on its ID.
+	-- Parameters:
+    SET Statu = @NewStatus  --The new status to assign to the book.
+    WHERE BID = @BookID; --The ID of the book (BID) whose status will be updated.
+    END;
+    select * from Book
+     -- Example Usage:
+     EXEC UpdateBookStatus @BookID = 1, @NewStatus = 'Returned'; --EXEC UpdateBookStatus 1, 'Returned'
+     select * from Book
+
    ![](./image/sp1.png)
 
  # 🧠 Explore and Practice for  Stored Procedure:

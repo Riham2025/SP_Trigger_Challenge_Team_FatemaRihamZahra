@@ -105,3 +105,6 @@ SELECT * FROM libraries WHERE name = 'NPL';
  ```
 
  ![](./image/TriggerIfDataDoNotExist.JPG)
+
+### altering a trigger
+![](./image/AlterTrigger.JPG)

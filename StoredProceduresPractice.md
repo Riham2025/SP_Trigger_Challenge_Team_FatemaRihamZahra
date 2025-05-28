@@ -137,7 +137,7 @@
     END
       END;
 
-exec PrintNumbers 
+          exec PrintNumbers 
 
 ![](./image/sp5if_no.png)
 
@@ -148,6 +148,21 @@ exec PrintNumbers
 # 🧠 Exploration Checklist
 
 ✅ What happens if procedure has a syntax error? 
+
+
+-- with syntax error 
+
+            CREATE PROCEDURE PrintNumbers
+         AS
+              BEGIN
+    -- DECLARE @Counter INT = 1; -- Initialize counter variable
+
+    WHILE @Counter <= 5
+    BEGIN
+        PRINT @Counter; -- Output the current value of the counter
+        SET @Counter = @Counter + 1; -- Increment the counter
+    END
+            END;
 
 ![](./image/sp7SynatxError.png)
 
